@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+  <info>
+    <title>Harvard - No Et Al (Custom)</title>
+    <id>http://www.zotero.org/styles/harvard-no-et-al-custom</id>
+    <link href="http://www.zotero.org/styles/harvard-no-et-al-custom" rel="self"/>
+    <author>
+      <name>Custom by ChatGPT</name>
+    </author>
+    <category citation-format="author-date"/>
+    <category field="generic-base"/>
+    <updated>2025-07-22T00:00:00+00:00</updated>
+    <summary>Harvard style with all authors shown (no et al).</summary>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name and="text" delimiter=", "/>
+      <substitute>
+        <names variable="editor"/>
+        <text variable="title"/>
+      </substitute>
+    </names>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" font-style="italic"/>
+  </macro>
+
+  <macro name="container-title">
+    <text variable="container-title"/>
+  </macro>
+
+  <macro name="pages">
+    <text variable="page" prefix=": "/>
+  </macro>
+
+  <macro name="publisher">
+    <group delimiter=": ">
+      <text variable="publisher"/>
+      <text variable="publisher-place"/>
+    </group>
+  </macro>
+
+  <citation collapse="year" et-al-min="100" et-al-use-first="100" disambiguate-add-names="true">
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <text macro="author"/>
+      <text macro="issued" prefix=" " />
+    </layout>
+  </citation>
+
+  <bibliography et-al-min="100" et-al-use-first="100" hanging-indent="true" line-spacing="2">
+    <layout>
+      <text macro="author"/>
+      <text macro="issued" prefix=" (" suffix="). "/>
+      <text macro="title" suffix=". "/>
+      <text macro="container-title" suffix=". "/>
+      <text macro="pages" suffix=". "/>
+      <text macro="publisher" suffix="."/>
+    </layout>
+  </bibliography>
+</style>
