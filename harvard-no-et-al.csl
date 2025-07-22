@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Harvard - No Et Al</title>
+    <id>http://www.zotero.org/styles/harvard-no-et-al</id>
+    <link href="http://www.zotero.org/styles/harvard-no-et-al" rel="self"/>
+    <author>
+      <name>Custom Style by ChatGPT</name>
+    </author>
+    <category citation-format="author-date"/>
+    <updated>2025-07-22T00:00:00+00:00</updated>
+  </info>
+  <citation>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <names variable="author">
+        <name and="text" delimiter=", "/>
+        <label form="short" prefix=", " text-case="lowercase" suffix="."/>
+        <substitute>
+          <names variable="editor"/>
+          <text variable="title"/>
+        </substitute>
+      </names>
+      <date variable="issued">
+        <date-part name="year"/>
+      </date>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout hanging-indent="true" delimiter=". ">
+      <names variable="author">
+        <name and="text" delimiter=", "/>
+        <label form="short" prefix=", " text-case="lowercase" suffix="."/>
+        <substitute>
+          <names variable="editor"/>
+          <text variable="title"/>
+        </substitute>
+      </names>
+      <date variable="issued">
+        <date-part name="year" prefix=" (" suffix=")"/>
+      </date>
+      <text variable="title" font-style="italic"/>
+      <text variable="container-title"/>
+      <text variable="volume" prefix=", Vol. "/>
+      <text variable="issue" prefix="(" suffix=")"/>
+      <text variable="page" prefix=", pp. "/>
+      <text variable="publisher" prefix=". "/>
+    </layout>
+  </bibliography>
+  <style-options>
+    <option name="et-al-min" value="100"/>
+    <option name="et-al-use-first" value="100"/>
+  </style-options>
+</style>
